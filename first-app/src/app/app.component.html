@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First-Angular-App</title>
+</head>
+<body>
+  <a [routerLink]="['/']">  
+    <header class="brand-name">
+      <img
+        class="brand-logo"
+        src="/assets/logo.svg"
+        alt="logo"
+        aria-hidden="true"
+      />
+    </header>
+  </a>
+  <router-outlet></router-outlet>
+</body>
+</html>

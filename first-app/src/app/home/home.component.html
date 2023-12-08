@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="content"></section>
+      <section>
+        <form>
+          <input type="text" placeholder="Filter by city" #filter/>
+          <button class="primary" (click)="filterResults(filter.value)" type="button">Search</button>
+        </form>
+      </section>
+      <app-housing-location
+        *ngFor="let housingLocation of filteredLocationList"
+        [housingLocation]="housingLocation"
+      >
+      </app-housing-location>
+    </main>
+  </body>
+</html>
